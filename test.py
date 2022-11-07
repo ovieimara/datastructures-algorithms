@@ -1667,6 +1667,92 @@ def miniMaxSum(arr):
 # vals = find_first_last(myList, target)
 # print(vals)
 
+'''
+1. Palindrome Index
+ALL
+Given a string of lowercase letters in the range asciila-z],
+determine the index of a character that can be removed to
+make the string a palindrome. There may be more than one
+solution, but any will do. If the word is already a palindrome or
+there is no solution, return -1. Otherwise, return the index of a
+character to remove.
+Example
+S=
+"bebe"
+Either remove 'b'at index 0 or 'c'at index 3.
+Function Description
+Complete the palindromelndex function in the editor below.
+palindromeindex has the following parameter(s):
+Language Python 3
+39
+if r >= 0:
+40
+return r
+41
+left
+==
+42
+right += 1
+43
+return -1
+45
+46
+def isValid(s, left):
+47
+stack = list (s)
+48
+print (stack, left)
+49
+string = stack.pop(left)
+50
+51
+Line:
+45 Col:
+Test Results
+Custom Input
+Run Code
+Run Tests
+Submit
+strings: a string to analyze
+Returns
+• int: the index of the character to remove or -1
+No test case passed.
+Use print or log statements to debug why your hidden test cases are failing. Hidden test cases & are used to evaluate if your code can handle different scenarios, including
+corner cases.
+Input Format
+The first line contains an integer q, the number of queries
+Each of the next a lines contains a query string s.
+Constraints
+1< g< 20
+X Test case 0
+X
+Test case 1
+&
+• 1 < length of s < 105 + 5
+All characters are in the range ascii[a-z].
+
+STDIN
+Function
+aaah
+baa
+aaa
+'aaab' (first querv)
+= Ibaa!
+(second query)
+laaal
+(third query)
+
+Explanation
+Query 1: "aaab"
+Removing "b'at index 3 results in a palindrome, so return 3,
+Query 2: "baa"
+Removing "b'at index 0 results in a palindrome, so return 0.
+Ouerv 3: "aaa"
+This string is already a palindrome, so return -1. Removing any
+one of the characters would result in a palindrome, but this test
+comes first.
+Note: The custom checker logic for this challenge is available
+'''
 
 # def createPalindrome(s):
 #     size = len(s)
@@ -1723,6 +1809,66 @@ def miniMaxSum(arr):
 # val = createPalindrome(s)
 # print(val)
 
+'''
+There will be two arrays of integers. Determine all integers that
+satisfy the following two conditions:
+1. The elements of the first array are all factors of the integer
+being considered
+2. The integer being considered is a factor of all elements of the
+second array
+These numbers are referred to as being between the two
+arrays. Determine how many such numbers exist.
+Example
+a = [2, 6)
+b= [24, 36]
+There are two numbers between the arravs: 6 and 12.
+6%2 = 0,6%6 = 0, 24%6 = 0 and 36%6 = 0 for the first
+value.
+12%2 = 0,12%6 = 0 and 24%12 = 0,36%12 = 0 for the
+second value. Return 2.
+Function Description
+Complete the getTotalx function in the editor below. It should
+return the number of integers that are betwen the sets.
+getTotalX has the following parameter(s):
+• int aln: an array of integers
+int b[m]: an array of integers
+Returns
+• int: the number of integers that are between the sets
+Input Format
+The first line contains two space-separated integers, n and m,
+the number of elements in arravs a and b.
+The second line contains n distinct space-separated integers
+
+return the number of integers that are betwen the sets
+2m 45s
+left
+getTotalX has the following parameter(s):
+Transcoders
+int a[nI. an array of integers
+• int b[m]: an array of integers
+Returns
+ALL
+• int. the number of integers that are between the sets
+Input Format
+The first line contains two space-separated integers, n and m,
+the number of elements in arrays a and b.
+The second line contains n distinct space-separated integers
+ali] where 0 < i < n.
+The third line contains m distinct space-separated integers bljl
+where 0 <j<m.
+Constraints
+• 1 < n, m < 10
+• 1 < ail < 100
+• 1 < 62 < 100
+
+
+Explanation
+2 and 4 divide evenlv into 4, 8, 12 and 16.
+4, 8 and 16 divide evenly into 16, 32, 96.
+4,8 and 16 are the only three numbers for which each element
+of a is a factor and each is a factor of all elements of b
+
+'''
 
 # def getTotalX(a, b):
 #
@@ -1754,6 +1900,56 @@ def miniMaxSum(arr):
 #
 # val = getTotalX(a, b)
 # print(val)
+
+'''
+Two words are anagrams of one another if their letters can be
+rearranged to form the other word.
+Given a string, split it into two contiguous substrings of equal
+length. Determine the minimum number of characters to
+change to make the two substrings into anagrams of one
+another.
+Example
+8 = abcede
+Break s into two parts: 'abc' and 'de'. Note that all letters have
+been used, the substrings are contiguous and their lengths are
+equal. Now you can change 'a' and 'b' in the first substring to 'd'
+and 'e' to have 'dec' and 'de' which are anagrams. Two changes
+were necessary.
+Function Description
+Complete the anagram function in the editor below.
+anagram has the following parameter(s):
+string s: a string
+Returns
+• int: the minimum number of characters to change or -1.
+Input Format
+The first line will contain an integer, q, the number of test cases
+Each test case will contain a string s.
+Constraints
+• 1 < 9 < 100
+• 1 < |s| < 104
+• s consists only of characters in the range asciia-z]
+
+Explanation
+Test Case #01: We split s into two strings S1='aaa' and S2
+=bbb'. We have to replace all three characters from the first
+string with 'b' to make the strings anagrams.
+Test Case #02: You have to replace 'a' with "b', which will
+generate "bb".
+Test Case #03: It is not possible for two strings of unequal
+length to be anagrams of one another.
+Test Case #04: We have to replace both the characters of first
+string ("mn") to make it an anagram of the other one.
+Test Case #05: S1 and S2 are already anagrams of one
+another.
+Test Case #06: Here S1 = "xaxb" and S2 = "bbxx" You must
+replace 'a' from S1 with "b' so that S1 = "xbxb"
+aaabbb
+ab
+abc
+mnop
+Xyyx
+xaxbbbxx
+'''
 
 def anagram(s):
     # Write your code here
@@ -1828,6 +2024,158 @@ s = 'xyyx'
 
 val = anagram(s)
 print(val)
+
+# !/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+# Complete the 'bomberMan' function below.
+#
+# The function is expected to return a STRING_ARRAY.
+# The function accepts following parameters:
+#  1. INTEGER n
+#  2. STRING_ARRAY grid
+#
+# def bomberMan(n, grid):
+#     # Write your code here
+#     state = ['idle', 'plant', 'detonate']
+#     last = 0
+#     grid = formatGrid(grid)
+#     states = []
+#     for i in range(n):
+#         if last == 3:
+#             last = 0
+#         states.append((i, state[last]))
+#         last += 1
+#
+#     for ns in states:
+#         n, s = ns
+#         if s == 'idle':
+#             pass
+#
+#         if s == 'plant':
+#             plantBomb(grid)
+#
+#         if s == 'detonate':
+#             detonate(grid)
+#
+#     return encodeList(grid)
+#
+# def prepare(grid):
+#     for i in range(0, len(grid)):
+#         for j in range(0, len(grid[0])):
+#             # print(grid[i])
+#             if grid[i][j] == '1':
+#                 grid[i][j] = 'O'
+#     # print(grid)
+#
+# def detonate(grid):
+#     for i in range(0, len(grid)):
+#         for j in range(0, len(grid[0])):
+#             # print(grid[i])
+#             if grid[i][j] == 'O':
+#                 # print(grid[i][j])
+#                 detonateLocation(i, j, grid)
+#
+#     prepare(grid)
+#
+# def plantBomb(grid):
+#     for i in range(0, len(grid)):
+#         for j in range(0, len(grid[0])):
+#             if grid[i][j] == '.':
+#                 grid[i][j] = '1'
+#
+#     # print(grid)
+#
+# def detonateLocation(i, j, grid):
+#     rows = len(grid)
+#     cols = len(grid[0])
+#     val = '.'
+#     top = i - 1
+#     down = i + 1
+#     left = j - 1
+#     right = j + 1
+#
+#     grid[i][j] = val
+#
+#     if top >= 0:
+#         grid[top][j] = val
+#
+#     if down < rows:
+#         grid[down][j] = val
+#
+#     if left >= 0:
+#         grid[i][left] = val
+#
+#     if right < cols:
+#         # if grid[i][right] == '1'or grid[i][right] == 'O':
+#         grid[i][right] = val
+#
+#     # print(i, j)
+#
+#
+# def formatGrid(grid):
+#     # print(grid)
+#     grids = [list(row) for row in grid]
+#
+#     return grids
+#
+#
+# def encodeList(grid):
+#     grids = [''.join(row) for row in grid]
+#     return grids
+
+# def minimumBribes(q):
+#     # Write your code here
+#     store = {}
+#     n = len(q)
+#     count = 0
+#     x = 0
+#     isSorted = False
+#
+#     while x < n or isSorted:
+#         isSorted = False
+#         for j in range(1, n):
+#
+#             prev = q[j - 1]
+#             curr = q[j]
+#
+#             if curr < prev:
+#                 updateBribes(prev, store)
+#
+#                 if store.get(prev) >= 3:
+#                     print('Too chaotic')
+#                     return
+#
+#                 count, isSorted = swap(j, q, count)
+#
+#         if not isSorted:
+#             print(store, count)
+#             return
+#
+#         x += 1
+#
+#     print(store)
+#
+# def updateBribes(val, store):
+#     count = store.get(val, 0) + 1
+#     store[val] = count
+#
+#
+# def swap(j, q, count):
+#     print(q, q[j], q[j - 1])
+#     q[j], q[j - 1] = q[j - 1], q[j]
+#     return count + 1, True
+#
+# q = [1, 2, 5, 3, 7, 8, 6, 4]
+# q = [2, 1, 5, 3, 4]
+# q = [2, 5, 1, 3, 4]
+# val = minimumBribes(q)
+# print(val)
 
 
 
