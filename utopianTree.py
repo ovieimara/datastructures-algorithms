@@ -1,5 +1,5 @@
 import math
-
+#complexity: Time: O(log n), space = O(1)
 # def utopianTree(n):
 #     # Write your code here
 #     end = math.ceil(n / 2)
@@ -9,6 +9,6 @@ import math
 #
 #     return height if n % 2 > 0 else height + 1
 
-
+#complexity: Time: O(1), space = O(1)
 def utopianTree(n):
     return (2 * ((2 ** math.ceil(n/2)) - 1)) + (n % 2 == 0) * 1
