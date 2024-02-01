@@ -1,3 +1,4 @@
+#complexity: Time: O(max(n,m,k)), space = O(max(n, m))
 def appendAndDelete(s: str, t: str, k: int):
     n = len(s)
     m = len(t)
@@ -22,6 +23,15 @@ def append_delete(x: str, y: str, ops: int, i: int, n, m):
 
     return 2 + append_delete(x, y, ops - 2, i - 1, n, m)
 
+# def append_delete(x: str, y: str, ops: int, i: int, n, m, total=0):
+#     if ops <= 0 or i < 0:
+#         return total
+#
+#     x[i] = y[i]
+#     if i >= n or i >= m:
+#         return append_delete(x, y, ops - 1, i - 1, n, m, total + 1)
+#
+#     return append_delete(x, y, ops - 2, i - 1, n, m, total + 2)
 
 def createArray(s: str, t: str, n: int, m: int) -> list:
     length = max(len(s), len(t))

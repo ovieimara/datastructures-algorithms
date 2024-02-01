@@ -6,7 +6,7 @@ import random
 import re
 import sys
 import bisect
-import heapq
+import minHeapq
 
 #
 # Complete the 'cookies' function below.
