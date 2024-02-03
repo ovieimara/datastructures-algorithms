@@ -24,7 +24,6 @@ def canAttack(r, c, k, direction, n, obstacles, squares):
         squares.append((row, col))
         row, col = row + x, col + y
 
-
 def convertObstaclesToSet(obstacles):
     # obstacles = set(obstacles)
     result = []
