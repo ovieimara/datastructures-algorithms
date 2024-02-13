@@ -17,7 +17,6 @@ def biggerIsGreater(w):
         j -= 1
 
     new_w = w[ : i] + w[j] + w[i + 1 : j] + w[i] + w[j + 1: ]
-
     return new_w[: i+1] + new_w[ : i : -1]
 
 # w = "abcd"
