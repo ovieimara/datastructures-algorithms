@@ -35,6 +35,9 @@ def update(query, array, max_value):
     return max_value[0]
 
 
+    # Write your code here
+
+
 queries = [[1,5,3], [4,8,7], [6,9,1]]
 # queries = [[1,2,100], [2,5,100], [3,4,100]]
 n = 10
