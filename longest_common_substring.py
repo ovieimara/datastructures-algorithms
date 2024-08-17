@@ -90,7 +90,7 @@ def lcs_multiple(strings: List):
     for l in range(1, size+1):
         for start in range(0, size-l+1):
             sub = min_string[start: start+l]
-            print(sub)
+            # print(sub)
 
             if all(sub in string for string in strings) and len(sub) > len(results):
                 results = sub
